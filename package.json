@@ -9,10 +9,10 @@
   },
   "author": "",
   "license": "ISC",
-  "dependencies": {},
   "devDependencies": {
-    "electron": "^3.0.2",
+    "electron": "^14.0.1",
     "electron-packager": "^13.1.1",
     "fs": "^0.0.2"
-  }
+  },
+  "dependencies": {}
 }

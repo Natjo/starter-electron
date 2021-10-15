@@ -1,0 +1,34 @@
+:root{
+    --font-1: 'WorkSans', sans-serif;
+
+    --ctr-width: 1180px;
+    --ctr-margin: 20px;
+
+    --ratio: 1366/2014;
+
+    --gap: 20px;
+
+    --header-height: 80px;
+
+    --color-text: #fff;
+    --color-gray-light: #f0f0f1;
+    --color-gray: #ccc;
+    --color-gray-dark: #1d2327;
+
+    --color-1: #0070EF;
+    --color-2: #80C7A0;
+    --color-3: #004FA8;
+    --color-4: #4CA5FF;
+    --color-5: #EE7766;
+
+    --font-size-sm: .875rem;
+    --font-size: 1.6rem;
+    --font-size-md: 1.125rem;
+    --font-size-xmd: 1rem;
+    --font-size-lg: 1.5rem;
+
+    --margin-sm: 30px;
+    --margin: 60px;
+    --margin-md: 40px;
+    --margin-lg: 40px;
+}

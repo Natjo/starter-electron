@@ -1,32 +1,45 @@
+<!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="UTF-8" />
-    <title>Electron</title>
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700&display=swap" rel="stylesheet"> 
-    <link href="assets/main.css" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="./admin/reset.css">
+    <link rel="stylesheet" href="./admin/variables.css">
+    <link rel="stylesheet" href="./admin/styles.css">
 </head>
 
 <body>
-
-    <header role="banner">
-        header
+    <header id="header">
+        <h1>Mon site</h1>
     </header>
 
     <main>
-        <h1>Electron starter kit</h1>
-        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Laudantium, accusamus ducimus illo totam commodi itaque provident vero praesentium iusto. Quam amet placeat perferendis, ad beatae explicabo veritatis, praesentium facilis autem itaque non expedita, vel similique earum nesciunt consequuntur totam veniam quo. Id quisquam officia delectus? Accusamus dolore tenetur, quas quod ducimus maiores voluptatum laboriosam officiis nam veritatis iusto dolorem adipisci itaque non aspernatur! Praesentium consequatur laudantium et voluptatibus maiores? Dolores tenetur autem earum inventore numquam nesciunt aperiam hic qui sint expedita, perferendis veniam possimus exercitationem voluptate quia repudiandae? Sint necessitatibus quod labore sit libero reiciendis illum culpa expedita nihil aperiam?</p>
+        <div id="sidebar">
+            <div id="pages">
+            </div>
+        </div>
+       
+        <section id="content">
+            <header class="content-header">
+                 <h1>Hub</h1>
+                <div>hub/</div>
+            </header>
+           
+            <section>
+           
+                <h2>Title</h2>
+                <h2>Baseline</h2>
+                <h2>Articles</h2>
+                <h2>Offers</h2>
+            </section>
+        </section>
     </main>
 
-    <footer role="contentinfo">
-        footer
-    </footer>
 
+    <!-- You can also require other files to run in this process -->
+    <script src="./renderer.js" type="module"></script>
 
 </body>
-
-<script>
-    require("./assets/app.js");
-</script>
 
 </html>
