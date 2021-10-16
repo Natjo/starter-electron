@@ -34,6 +34,7 @@ wordpress.vhost.conf
 
 # Npm
 node_modules/*
+admin/node_modules/*
 package-lock.json
 
 # Work
