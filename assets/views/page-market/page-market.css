@@ -1,0 +1,239 @@
+#market {
+    overflow: hidden;
+
+    .main-section {
+        height: 100vh;
+        display: grid;
+        /* grid-template-columns: var(--header-width) [full] 50px [container] 1.75fr [container-end] 50px [full-end] 420px;*/
+        grid-template-columns: var(--header-width) [full] 3.5% [container] 1.75fr [container-end] 3.5% [full-end] 350px;
+        grid-template-rows: min-content min-content minmax(auto, 100%);
+        overflow-y: auto;
+    }
+    .hero {
+        grid-row: 1;
+        grid-column: container;
+        /* padding-top: 60px;*/
+        padding-top: 5.9vh;
+        padding-bottom: 30px;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+        box-sizing: border-box;
+    }
+    h1 {
+        /* font-size: 11rem;*/
+        font-size: 8.05vw;
+        /*line-height: 1.1;*/
+    }
+    .title {
+        position: relative;
+        display: flex;
+        height: 150px;
+        align-items: center;
+        overflow: hidden;
+    }
+    .title svg {
+        position: absolute;
+        opacity: 0.8;
+        top: 0;
+    }
+    .title .rond1 {
+        left: 0;
+    }
+    .title .rond2 {
+        right: -100px;
+    }
+
+    /**/
+    .desc {
+        font-size: 1.7rem;
+        line-height: 1.2;
+    }
+    button {
+        font-weight: 800;
+    }
+    .section-content {
+        align-self: center;
+        grid-row: 2;
+        grid-column: container;
+        align-self: start;
+    }
+    .articles {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: var(--gap);
+    }
+    .articles li {
+        background-color: var(--color-3);
+        min-height: 97px;
+        border-radius: 13px;
+        display: flex;
+        font-size: 1.6rem;
+
+        box-sizing: border-box;
+    }
+    .articles li a {
+        display: flex;
+        align-items: center;
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1.2;
+        width: 100%;
+    }
+    .articles li .icon {
+        flex: 0 1 85px;
+        fill: var(--color-5);
+    }
+    .articles li span {
+        flex: 1;
+        padding-right: 10px;
+    }
+
+    .block-offers {
+        align-self: end;
+        grid-row: 3;
+        grid-column: full;
+        margin-top: 40px;
+
+        ul {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        li {
+            position: relative;
+        }
+        picture::after {
+            content: "";
+            width: 100%;
+            height: 50%;
+            background: linear-gradient(rgba(0, 0, 0, 0) 0%,rgba(0, 0, 0, 0.5) 100%);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+        }
+        li img {
+            width: 100%;
+            height: auto;
+            vertical-align: bottom;
+        }
+        h2 {
+            margin-left: 50px;
+            margin-bottom: 30px;
+        }
+        h3 {
+            bottom: 30px;
+            left: 30px;
+            width: 50%;
+            position: absolute;
+            font-weight: 700;
+            font-size: 2.2rem;
+            line-height: 1.1;
+        }
+        .icon {
+            bottom: 30px;
+            right: 30px;
+            position: absolute;
+        }
+    }
+
+    .block-discover {
+        grid-column: 5;
+        grid-row: 1/4;
+        align-self: stretch;
+
+        .sticky {
+            height: 100vh;
+            position: sticky;
+            top: 0;
+            background: transparent url(../img/sidebar.png) no-repeat 0;
+            background-size: 100% 100%;
+        }
+    }
+
+    @media (--breakpoint-xlg-up) {
+        .main-section {
+            grid-template-columns: var(--header-width) [full] 3.5% [container] 1.75fr [container-end] 3.5% [full-end] 30%;
+        }
+    }
+    @media (--breakpoint-wd-up) {
+        .articles {
+            width: 85%;
+        }
+    }
+
+    .main-section {
+        transition: opacity 0.4s ease 0.2s;
+    }
+
+    &.hide {
+        overflow: hidden;
+
+        .main-section {
+            opacity: 0;
+        }
+    }
+}
+
+/* animations */
+#market {
+    h1 {
+        visibility: hidden;
+        --type: lines;
+        --delay: 0.1;
+        --duration: 0.6;
+        --animation: appear;
+    }    
+    h2 {
+        visibility: hidden;
+        --type: lines;
+        --delay: 0.1;
+        --duration: 0.6;
+        --animation: appear;
+    }
+    .desc {
+        visibility: hidden;
+        --type: lines;
+        --delay: 0.1;
+        --duration: 0.6;
+        --animation: appear;
+    }
+    .articles,
+    .offers {
+        visibility: hidden;
+        --type: list;
+        --delay: 0.2;
+        --duration: 0.6;
+        --animation: fromBottom;
+    }
+    .hero-secondary h2 {
+        visibility: hidden;
+        --type: lines;
+        --delay: 0.1;
+        --duration: 0.6;
+        --animation: appear;
+    }
+    .rond0 {
+        visibility: hidden;
+        --type: normal;
+        --duration: 0.6;
+        --animation: fromLeft;
+    }
+    .rond1 {
+        visibility: hidden;
+        --type: normal;
+        --duration: 0.6;
+        --animation: fromLeftOpacity;
+    }
+    .rond2 {
+        visibility: hidden;
+        --type: normal;
+        --duration: 0.6;
+        --animation: fromRightOpacity;
+    }
+    .block-discover{
+        visibility: hidden;
+        --type: normal;
+        --duration: 0.6;
+        --animation: fade; 
+    }
+}

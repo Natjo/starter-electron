@@ -1,0 +1,53 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "First hydro",
+                "town": "Russia",
+                "picto": "boat",
+                "type": "feed",
+                "details": [
+                    "3 trains",
+                    "16.5 Mtpa"
+                ],
+                "technology": [
+                    "Air Products",
+                    "AP-C3MR"
+                ],
+                "characteristics": [
+                    "Gas Turbines; Air cooled "
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-80.140625, 19.435514339097825]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Second hydro",
+                "picto": "boat",
+                "type": "epc",
+                "details": [
+                    "3 trains",
+                    "16.5 Mtpa"
+                ],
+                "technology": [
+                    "Air Products",
+                    "AP-C3MR"
+                ],
+                "characteristics": [
+                    "Gas Turbines; Air cooled "
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-56.734375, 30.259067203213018]
+            }
+        }
+
+    ]
+}

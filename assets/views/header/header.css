@@ -1,0 +1,105 @@
+#header {
+    position: fixed;
+    z-index: 100;
+    display: grid;
+    grid-template-rows: max-content var(--header-width) auto var(--header-width) max-content;
+    width: var(--header-width);
+    height: 100vh;
+    border-right: 2px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+
+    .logo {
+        margin-top: 30px;
+        width: 73px;
+        justify-self: center;
+
+        img {
+            width: 100%;
+        }
+    }
+    .market-name {
+        align-items: center;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        font-size: 1.8rem;
+        display: none;
+        justify-content: center;
+        letter-spacing: 0.8rem;
+        text-transform: uppercase;
+        transform: rotate(180deg);
+        grid-row: 3;
+        font-weight: 800;
+    }
+    .cta-back {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        grid-row: 4;
+    }
+    .cta-close {
+        display: none;
+        align-items: center;
+        justify-content: center;
+        grid-row: 4;
+    }
+    #btn-nav {
+        border-top: 2px solid rgba(255, 255, 255, 0.2);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: var(--header-width);
+        grid-row: -2;
+
+        .burger {
+            width: 25px;
+        }
+        .close {
+            display: none;
+            width: 25px;
+        }
+        &.active .burger {
+            display: none;
+        }
+
+        &.active .close {
+            display: block;
+        }
+    }
+    &.level1 .market-name {
+        display: flex;
+    }
+    &.level2 {
+        .cta-back {
+            display: flex;
+            width: 100%;
+            height: var(--header-width);
+        }
+        .market-name {
+            display: flex;
+        }
+    }
+    &.levelx {
+        .cta-close {
+            display: flex;
+        }
+        .cta-back {
+            display: none;
+        }
+        .market-name {
+            display: flex;
+        }
+    }
+}
+
+/* animation */
+#header{
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: all .4s ease;
+
+    &.display{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

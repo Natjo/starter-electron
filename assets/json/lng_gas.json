@@ -1,0 +1,122 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Yamal LNG",
+                "town": "Russia",
+                "picto": "boat",
+                "type": "feed",
+                "details": [
+                    "3 trains",
+                    "16.5 Mtpa"
+                ],
+                "technology": [
+                    "Air Products",
+                    "AP-C3MR"
+                ],
+                "characteristics": [
+                    "Gas Turbines; Air cooled "
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-99.140625, 19.435514339097825]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Austin",
+                "picto": "boat",
+                "type": "epc",
+                "details": [
+                    "3 trains",
+                    "16.5 Mtpa"
+                ],
+                "technology": [
+                    "Air Products",
+                    "AP-C3MR"
+                ],
+                "characteristics": [
+                    "Gas Turbines; Air cooled "
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-97.734375, 30.259067203213018]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Albany",
+                "picto": "boat",
+                "type": "epc",
+                "details": [
+                    "3 trains",
+                    "16.5 Mtpa"
+                ],
+                "technology": [
+                    "Air Products",
+                    "AP-C3MR"
+                ],
+                "characteristics": [
+                    "Gas Turbines; Air cooled "
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-73.80615234375, 42.66628070564928]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Seattle",
+                "picto": "boat",
+                "type": "epc",
+                "details": [
+                    "3 trains",
+                    "16.5 Mtpa"
+                ],
+                "technology": [
+                    "Air Products",
+                    "AP-C3MR"
+                ],
+                "characteristics": [
+                    "Gas Turbines; Air cooled "
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-122.3876953125, 47.57652571374621]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Saint Paul",
+                "picto": "boat",
+                "type": "epc",
+                "details": [
+                    "3 trains",
+                    "16.5 Mtpa"
+                ],
+                "technology": [
+                    "Air Products",
+                    "AP-C3MR"
+                ],
+                "characteristics": [
+                    "Gas Turbines; Air cooled "
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-93.1201171875, 44.96479793033101]
+            }
+        }
+
+    ]
+}

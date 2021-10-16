@@ -1,0 +1,14 @@
+
+.block-wysiwyg {
+    padding-left: 60px;
+    padding-right: 60px;
+    margin-top: 40px;
+
+    h3 {
+        margin-bottom: 20px;
+    }
+    p {
+        line-height: 1.4;
+        color: #000;
+    }
+}

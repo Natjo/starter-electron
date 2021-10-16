@@ -1,0 +1,83 @@
+
+@keyframes appear{
+	from{
+		transform: translateY(100%);
+	}
+	to{
+		transform: translateY(0);
+	}
+}
+@keyframes fade{
+	from{
+		opacity: 0;
+	}
+	to{
+		opacity: 1;
+	}
+}
+@keyframes fromBottom{
+	from{
+		transform: translateY(50px);
+		opacity: 0;
+	}
+	to{
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
+@keyframes fromLeft{
+	from{
+		transform: translateX(-50px);
+		opacity: 0;
+	}
+	to{
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes fromRight{
+	from{
+		transform: translateX(50px);
+		opacity: 0;
+	}
+	to{
+		transform: translateX(0);
+		opacity: 1;
+	}
+}
+@keyframes fromLeftOpacity{
+	from{
+		transform: translateX(-50px);
+		opacity: 0;
+	}
+	to{
+		transform: translateX(0);
+		opacity: .8;
+	}
+}
+@keyframes fromRightOpacity{
+	from{
+		transform: translateX(50px);
+		opacity: 0;
+	}
+	to{
+		transform: translateX(0);
+		opacity: .8;
+	}
+}
+
+.animate{
+	visibility: hidden;
+	animation-play-state: paused;
+}
+.animate.display{
+	visibility: visible;
+	animation-play-state: running;
+}
+.animate.display span{
+	animation-play-state: running;
+}
+.animate span{
+	display: inline-block;
+	animation-play-state: paused;
+}

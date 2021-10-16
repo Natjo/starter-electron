@@ -1,0 +1,26 @@
+<section class="strate-cross_selling">
+    <h2>
+        ${args.title}
+    </h2>
+
+    <p>
+        ${args.text}
+    </p>
+
+    <ol class="list-page">
+        ${args.items.map(item =>`
+            <li>
+                <a href="${item.href}">
+                    <svg class="icon" width="100" height="100" aria-hidden="true" viewBox="0 0 58 58">
+                        <use xlink:href="assets/img/icons.svg#${item.picto}"></use>
+                    </svg>
+                    <h3>${item.title}</h3>
+    
+                    <svg class="arrow" width="16" height="16" aria-hidden="true" viewBox="0 0 16 16">
+                        <use xlink:href="assets/img/icons.svg#arrow"></use>
+                    </svg>
+                </a>
+            </li>
+        `).join('')}
+    </ol>
+</section>
