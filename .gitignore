@@ -34,8 +34,11 @@ wordpress.vhost.conf
 
 # Npm
 node_modules/*
-admin/node_modules/*
 package-lock.json
+
+# Admin 
+admin/node_modules/*
+admin/release-builds/*
 
 # Work
 *.log
