@@ -1,0 +1,30 @@
+<div class="block-citations" data-views="block-citations">
+
+    ${args.items.map(item =>`
+        <figure role="tabpanel" aria-hidden="${item.hidden}" id="${item.id}" class="block-blockquote">
+            <blockquote>
+                <svg class="icon" width="80" height="80" aria-hidden="true" viewBox="0 0 47 45">
+                    <use xlink:href="assets/img/icons.svg#quote"></use>
+                </svg>
+                <p>
+                   ${item.text}
+                </p>
+            </blockquote>
+            <figcaption>
+                <strong>${item.author}</strong>
+                ${item.author_function}
+            </figcaption>
+        </figure>
+    
+    `).join('')}
+    
+    <ul class="list-crew">
+        ${args.items.map(item =>`
+            <li>
+                <button aria-controls="${item.id}" aria-expanded="true" role="tab" aria-selected="true" data-img="">
+                    <img src="${item.author_img}" width="155" alt="">
+                </button>
+            </li>
+        `).join('')}
+    </ul>
+</div>

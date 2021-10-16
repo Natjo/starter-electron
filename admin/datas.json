@@ -3,16 +3,39 @@
         "id": 1,
         "name": "Hub",
         "slug": "hub",
+        "tpl": {
+            "slug": "tpl-hub",
+            "fields": [
+                {
+                    "slug": "baseline",
+                    "value": "aaaaa Where energies make tomorrow"
+                },
+                {
+                    "slug": "title",
+                    "value": "We are pioneers, accelerating the energy transition"
+                }
+            ]
+        },
         "childs": [
             {
                 "id": 2,
                 "name": "Lng / Gas",
                 "slug": "hub/lng_gas",
+                "tpl": {
+                    "slug": "tpl-market",
+                    "fields": [
+                    ]
+                },
                 "childs": [
                     {
                         "id": 3,
                         "name": "Article 1",
                         "slug": "hub/lng_gas/article1",
+                        "tpl": {
+                            "slug": "tpl-article",
+                            "fields": [
+                            ]
+                        },
                         "taxo": {
                             "category": ["article"]
                         }
@@ -21,6 +44,11 @@
                          "id": 4,
                          "name": "Offre 1",
                          "slug": "hub/lng_gas/offre1",
+                         "tpl": {
+                            "slug": "tpl-article",
+                            "fields": [
+                            ]
+                        },
                          "taxo": {
                              "category": ["offer"]
                          }
@@ -31,11 +59,21 @@
                 "id": 5,
                 "name": "Hydrogen",
                 "slug": "hydrogen",
+                "tpl": {
+                    "slug": "tpl-market",
+                    "fields": [
+                    ]
+                },
                 "childs": [
                     {
                         "id": 6,
                         "name": "Article 1",
                         "slug": "hydrogen/article1",
+                        "tpl": {
+                            "slug": "tpl-article",
+                            "fields": [
+                            ]
+                        },
                         "taxo": {
                             "category": ["article"]
                         }

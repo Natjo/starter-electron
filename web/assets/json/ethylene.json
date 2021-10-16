@@ -1,0 +1,52 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Projet 1 ethylene",
+                "town": "Russia",
+                "picto": "boat",
+                "type": "feed",
+                "details": [
+                    "3 trains",
+                    "16.5 Mtpa"
+                ],
+                "technology": [
+                    "Air Products",
+                    "AP-C3MR"
+                ],
+                "characteristics": [
+                    "Gas Turbines; Air cooled "
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-99.140625, 19.435514339097825]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Prjet 2",
+                "picto": "boat",
+                "type": "epc",
+                "details": [
+                    "3 trains",
+                    "16.5 Mtpa"
+                ],
+                "technology": [
+                    "Air Products",
+                    "AP-C3MR"
+                ],
+                "characteristics": [
+                    "Gas Turbines; Air cooled "
+                ]
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [-122.3876953125, 47.57652571374621]
+            }
+        }
+    ]
+}

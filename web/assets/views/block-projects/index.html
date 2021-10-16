@@ -1,0 +1,25 @@
+<div class="block-projects" data-views="block-projects">
+
+    ${args.blocks.map(block => `
+        <h3 class="tl3">${block.title} </h3>
+        <ul>
+        ${block.items.map(item => `
+            <li class="card-project">
+                <img src="${item.img}" width="155" alt="">
+                <div class="text">
+                    <span class="country">${item.country}</span>
+                    <h4>${item.title}</h4>
+                    <p>${item.desc}</p>   
+                </div>
+            </li>
+        `).join('')}
+        </ul>
+    `).join('')}
+
+    <a href="" class="cta">
+        All our projects
+        <svg class="icon" width="12" height="12" aria-hidden="true" viewBox="0 0 16 16">
+            <use xlink:href="assets/img/icons.svg#arrow"></use>
+        </svg>
+    </a>
+</div>

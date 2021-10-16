@@ -1,0 +1,11 @@
+<ul class="list-key_numbers">
+    ${args.items.map(item =>`
+    <li>
+        <svg class="icon" width="60" height="60" aria-hidden="true" viewBox="0 0 60 60">
+            <use xlink:href="assets/img/icons.svg#${item.icon}"></use>
+        </svg>
+        <div class="number">${item.number}</div>
+        <div class="key">${item.key}</div>
+    </li>
+    `).join('')}
+</ul>

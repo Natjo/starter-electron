@@ -1,58 +1,14 @@
 <main id="hub" data-views="page-hub">
     <section class="main-section">
         <header class="hero">
-            <h1>We are pioneers,<br>accelerating<br>the energy transition</h1>
+            <h1>${args.title}</h1>
 
             <div class="baseline">
-                Where energies make tomorrow
+                ${args.baseline}
                 <svg width="12" height="12">
                     <circle fill="#fff" cx="6" cy="6" r="6" />
                 </svg>
             </div>
         </header>
-
-        <div class="section-content">
-            <img class="rond0" src="assets/img/rond.png" alt="" width="198">
-
-            <svg class="rond1" aria-hidden="true" width="188" height="188" viewBox="0 0 188 188">
-                <circle fill="var(--color-5)" cx="94" cy="94" r="94" />
-            </svg>
-
-            <div class="type">Our markets</div>
-            <h2>Market title</h2>
-            <svg class="rond2" aria-hidden="true" width="188" height="188" viewBox="0 0 188 188">
-                <circle fill="var(--color-5)" cx="94" cy="94" r="94" />
-            </svg>
-        </div>
-
-        <div class="slider-hub">
-            <div class="swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" data-title="LNG / Gas">
-                        <a class="cta-page" href="${slug}lng_gas/">
-                            <picture>
-                                <img src="assets/img/${slug}lng_gas/market.jpg" alt="">
-                            </picture>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide" data-title="Ethylene">
-                        <a class="cta-page" href="${slug}ethylene/">
-                            <picture>
-                                <img src="assets/img/${slug}ethylene/market.jpg" alt="">
-                            </picture>
-                        </a>
-                    </div>
-
-                    <div class="swiper-slide" data-title="Hydrogen">
-                        <a class="cta-page" href="${slug}hydrogen/">
-                            <picture>
-                                <img src="assets/img/${slug}hydrogen/market.jpg" alt="">
-                            </picture>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 </main>

@@ -4,25 +4,20 @@
 // `nodeIntegration` is turned off. Use `preload.js` to
 // selectively enable features needed in the rendering
 // process.
-
+let pages = window.electron.pages();
 import test from "./js/test.js";
 test();
 
-//fs.writeFileSync("test3.html",  "hello");
-
-const pages = document.querySelector("#pages");
-
+const list_pages = document.querySelector("#pages");
 const display_pages = (datas) => {
     let markup = "";
     const ol = (datas) => {
         markup += `<ol>`;
         for (let data in datas) {
             markup += `<li>`;  
-            window.electron.createPage(datas[data].slug, "value");
             if (datas[data].childs)
                 markup += `<details><summary>${datas[data].name}</summary>`;
             else markup += `${datas[data].name}`;
-          
             ol(datas[data].childs);
             if (datas[data].childs) markup += `</details>`;
             else markup += `</li>`;
@@ -31,11 +26,10 @@ const display_pages = (datas) => {
     };
     ol(datas);
 
-    pages.innerHTML = markup;
+    list_pages.innerHTML = markup;
 };
 
-fetch("./datas.json")
-    .then((resp) => resp.json())
-    .then((datas) => {
-      //  display_pages(datas);
-    });
+
+
+
+display_pages(pages);
