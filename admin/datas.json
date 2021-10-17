@@ -1,5 +1,15 @@
 [
     {
+        "id": 0,
+        "name": "Home",
+        "slug": "",
+        "tpl": {  
+            "slug": "tpl-home", 
+            "fields": []
+        },
+        "childs": []
+    },
+    {
         "id": 1,
         "name": "Hub",
         "slug": "hub",
@@ -8,10 +18,14 @@
             "fields": [
                 {
                     "slug": "baseline",
+                    "type": "field",
+                    "name": "Baseline",
                     "value": "aaaaa Where energies make tomorrow"
                 },
                 {
                     "slug": "title",
+                    "type": "field",
+                    "name": "Title",
                     "value": "We are pioneers, accelerating the energy transition"
                 }
             ]
@@ -24,6 +38,49 @@
                 "tpl": {
                     "slug": "tpl-market",
                     "fields": [
+                        {
+                            "slug": "title",
+                            "type": "field",
+                            "name": "Title",
+                            "value": "Where energies make tomorrow"
+                        },
+                        {
+                            "slug": "desc",
+                            "type": "field",
+                            "name": "Description",
+                            "value": "Description"
+                        },
+                        {
+                            "slug": "articles-list",
+                            "type": "list",
+                            "name": "Articles",
+                            "items": [
+                                {
+                                    "value": "article1"
+                                },
+                                {
+                                    "value": "article2"
+                                }
+                            ]
+                        },
+                        {
+                            "slug": "offers",
+                            "type": "field",
+                            "name": "Offres",
+                            "value": "Nos offres",
+                            "fields": [
+                                {
+                                    "slug": "offers-list",
+                                    "type": "list",
+                                    "name": "Offres",
+                                    "items": [
+                                        {
+                                            "value": "offre 1"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
                     ]
                 },
                 "childs": [
@@ -33,26 +90,24 @@
                         "slug": "hub/lng_gas/article1",
                         "tpl": {
                             "slug": "tpl-article",
-                            "fields": [
-                            ]
+                            "fields": []
                         },
                         "taxo": {
                             "category": ["article"]
                         }
                     },
                     {
-                         "id": 4,
-                         "name": "Offre 1",
-                         "slug": "hub/lng_gas/offre1",
-                         "tpl": {
+                        "id": 4,
+                        "name": "Offre 1",
+                        "slug": "hub/lng_gas/offre1",
+                        "tpl": {
                             "slug": "tpl-article",
-                            "fields": [
-                            ]
+                            "fields": []
                         },
-                         "taxo": {
-                             "category": ["offer"]
-                         }
-                     }
+                        "taxo": {
+                            "category": ["offer"]
+                        }
+                    }
                 ]
             },
             {
@@ -61,8 +116,7 @@
                 "slug": "hydrogen",
                 "tpl": {
                     "slug": "tpl-market",
-                    "fields": [
-                    ]
+                    "fields": []
                 },
                 "childs": [
                     {
@@ -71,8 +125,7 @@
                         "slug": "hydrogen/article1",
                         "tpl": {
                             "slug": "tpl-article",
-                            "fields": [
-                            ]
+                            "fields": []
                         },
                         "taxo": {
                             "category": ["article"]

@@ -12,13 +12,10 @@ const isProd = process.argv[2] == "--prod" ? true : false;
 const src = "../assets/";
 const dist = "../web/";
 const root = __dirname.replace("admin", "");
-let pages;
+let datas;
+let layout = {}
+let templates = {};
 
-let templates = {
-    "tpl-hub": '<main id="hub">${args.title} ${args.baseline}</main>',
-    "tpl-market": '<main id="market">${content}</main>',
-    "tpl-article": '<main id="articles">${content}</main>',
-};
 const core = {
     styles: [],
     initTime: new Date(),
@@ -117,31 +114,61 @@ const core = {
                     args[field.slug] = field.value;
                 }
                 const page = eval("`" + templates[datas[data].tpl.slug] + "`");
-                fs.writeFileSync(`../web/${datas[data].slug}/index.html`, eval("`" + basehtml + "`"));
+                fs.writeFileSync(`../web/${datas[data].slug}/index.html`, page);
                 recursive(datas[data].childs);
             }
         };
         recursive(datas);
     },
+    templates() {
+        const dir = "../content/templates/";
+        const recursive = (dir) => {
+            fs.readdirSync(dir).forEach((res) => {
+                const file = path.resolve(dir, res);
+                const stat = fs.statSync(file);
+                if (stat && stat.isDirectory()) recursive(file);
+                else if (!/.DS_Store$/.test(file)) {
+                    const name = file.replace(root, "");
+                    const dir = name.split('/')[2];
+                    templates[dir] = fs.readFileSync("../"+name, 'utf8');
+                }
+            });
+        };
+        recursive(dir);
+    },
+
+    layout() {
+        const dir = '../content/layout/'
+        const recursive = (dir) => {
+            fs.readdirSync(dir).forEach((res) => {
+                const file = path.resolve(dir, res);
+                const stat = fs.statSync(file);
+                if (stat && stat.isDirectory()) recursive(file);
+                else if (!/.DS_Store$/.test(file)) {
+                    const name = file.replace(root, "");
+                    const filename = path.parse(name).base;
+                    const ext = path.extname(filename);
+                    const gg = filename.replace(ext, '');
+                    console.log(name,gg);
+                    layout[gg] = fs.readFileSync("../"+name, 'utf8');
+                }
+            });
+        };
+        recursive(dir);
+    },
 };
-let basehtml ;
-fetch("../templates/tpl-hub/index.html")
-    .then((resp) => resp.text())
-    .then((html) => {
-        templates['tpl-hub'] = html;
-   
-    });
-fetch("../templates/index.html")
-    .then((resp) => resp.text())
-    .then((html) => {
-        basehtml = html;
-   
-    });
+
+
+
+core.layout();
+core.templates();
+
+
 fetch("./datas.json")
     .then((resp) => resp.json())
-    .then((datas) => {
-        pages = datas;
-        core.pages(pages);
+    .then((result) => {
+        datas = result;
+        core.pages(datas);
     });
 
 
@@ -159,5 +186,8 @@ contextBridge.exposeInMainWorld("electron", {
     copyFile: (file, dist_name) => {
         fs.copySync(file, dist_name);
     },
-    pages: () => pages,
+    datas: () => datas,
+    getPage: (slug) => {
+       
+    },
 });

@@ -50,5 +50,10 @@ main{
 
 .content-header{
     margin-bottom: 40px;
+}
 
+/* page content */
+.field{
+    padding: 40px;
+    border-bottom: 1px solid #ccc;
 }
